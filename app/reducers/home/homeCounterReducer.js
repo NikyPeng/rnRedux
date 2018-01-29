@@ -7,6 +7,7 @@ const homeCounterReducer = (state, action) => {
     if(typeof state === 'undefined'){
         return initState
     }
+    //console.log('****counter****');
     switch (action.type){
         case 'INCREMENT':
             return state + 1
@@ -15,6 +16,7 @@ const homeCounterReducer = (state, action) => {
             return state - 1
             break;
         default :
+            return state;
             break;
     }
 };

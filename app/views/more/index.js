@@ -4,7 +4,7 @@ import {
     Text,
     Image,
 } from 'react-native';
-
+import WebviewComp from './../components/WebviewComp';
 export default class More extends Component {
     constructor(props) {
         super(props);
@@ -17,7 +17,11 @@ export default class More extends Component {
     };
     render() {
         return (
-            <View></View>
+            <View style={{flex: 1}}>
+                <WebviewComp
+                    source={{url:'https://www.baidu.com'}}
+                />
+            </View>
         )
     }
 }

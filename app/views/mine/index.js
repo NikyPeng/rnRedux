@@ -4,6 +4,7 @@ import {
     Text,
     Image,
 } from 'react-native';
+import MineComp from './components/mine';
 
 export default class Mine extends Component {
     constructor(props) {
@@ -17,7 +18,9 @@ export default class Mine extends Component {
     };
     render() {
         return (
-            <View></View>
+            <View style={{flex: 1}}>
+                <MineComp navigation={this.props.navigation} />
+            </View>
         )
     }
 }

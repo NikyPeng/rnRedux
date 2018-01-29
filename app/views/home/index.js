@@ -7,8 +7,7 @@ import {
     Text,
     Image,
 } from 'react-native';
-import Counter from './components/counter/counter';
-import baseStyles from './../../styles/baseStyles';
+import HomeComp from './components/home';
 
 export default class Home extends Component {
     constructor(props) {
@@ -22,8 +21,8 @@ export default class Home extends Component {
     };
     render() {
         return (
-            <View style={[baseStyles.container, baseStyles.flexRow]}>
-                <Counter />
+            <View style={{flex: 1}}>
+                <HomeComp />
             </View>
         )
     }

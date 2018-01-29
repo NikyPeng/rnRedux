@@ -7,7 +7,10 @@ const homeTypes = {
 };
 const productsTypes = {};
 
-const mineTypes = {};
+const mineTypes = {
+    loginInfos: 'LOGININFOS',
+    login: 'LOGIN',
+};
 
 const moreTypes = {};
 

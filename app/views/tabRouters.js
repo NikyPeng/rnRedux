@@ -14,6 +14,7 @@ import Home from './home';
 import Products from './products';
 import Mine from './mine';
 import More from './more';
+const EventEmitter = require('RCTDeviceEventEmitter');
 
 //首页tab配置
 const homePage = {
@@ -36,11 +37,16 @@ const productsPage = {
 
 //我的tab配置
 const minePage = {
+    header: null,
     title: 'mine',
     tabBarIcon: (e) => {
         return <Image source={e.focused ? require('./../imgs/common/active_mine_icon.png') : require('./../imgs/common/mine_icon.png')} />
     },
-    tabBarLabel: '我的'
+    tabBarLabel: '我的',
+    tabBarOnPress: (o) => {
+        console.log('click mine tabBar')
+        EventEmitter.emit('checkIsLogin', o);
+    },
 }
 
 //更多tab配置
