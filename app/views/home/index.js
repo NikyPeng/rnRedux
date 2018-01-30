@@ -22,7 +22,7 @@ export default class Home extends Component {
     render() {
         return (
             <View style={{flex: 1}}>
-                <HomeComp />
+                <HomeComp navigation={this.props.navigation} />
             </View>
         )
     }

@@ -1,16 +1,16 @@
 /**
  * Created by glzc on 2017/12/22.
  */
-//import PageList from './component/listPage'
+import PageOne from './components/pageOne/pageOne';
 //import BuyPage from './component/buyPage'
-/*const homeRouters = {
-    homePageList: {
-        screen: PageList
+const homeRouters = {
+    homePageOne: {
+        screen: PageOne,
+        path: 'homePageOne',
     },
-    homeBuyPage: {
+    /*homeBuyPage: {
         screen: BuyPage
-    }
-}*/
-const homeRouters = {};
+    }*/
+}
 
 export default homeRouters

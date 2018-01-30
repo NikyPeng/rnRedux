@@ -19,7 +19,6 @@ export default class CounterModel extends Component {
         
     };
     render() {
-        console.log('counter')
         return (
             <View style={counterCompStyles.flexRow}>
                 <Button style={[counterCompStyles.flexRow, counterCompStyles.btn]} _onPress={this.props.onIncrement}>

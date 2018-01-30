@@ -95,10 +95,10 @@ const tabBarOptions = Util.isIOS ? {
     allowFontScaling: false,        //Whether label font should scale to respect Text Size accessibility settings, default is true.
 }
 const tabRouters = TabNavigator({
-    home: {screen: Home, navigationOptions: homePage},
-    products: {screen: Products, navigationOptions: productsPage},
-    mine: {screen: Mine, navigationOptions: minePage},
-    more: {screen: More, navigationOptions: morePage}
+    home: {screen: Home, path: 'home',navigationOptions: homePage},
+    products: {screen: Products, path: 'products', navigationOptions: productsPage},
+    mine: {screen: Mine, path: 'mine', navigationOptions: minePage},
+    more: {screen: More, path: 'more', navigationOptions: morePage}
 },{
     tabBarPosition: 'bottom',
     swiperEnabled: false,
