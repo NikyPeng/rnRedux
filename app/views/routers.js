@@ -10,7 +10,7 @@ import mineRouters from './mine/mineRouters';
 
 const AppRouters = StackNavigator(Object.assign({},{
     tab: {screen: tabRouters}
-}, homeRouters, mineRouters))
+}, homeRouters, mineRouters));
 console.log('appRouters', Object.assign({},{
     tab: {screen: tabRouters, path: 'tab'}
 }, homeRouters, mineRouters));
