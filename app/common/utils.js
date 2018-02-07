@@ -163,7 +163,6 @@ module.exports = {
                     }
                 }
             }
-            console.log('action',action,'state',state);
             if((action.type == 'Navigation/NAVIGATE' && action.routeName == 'home') || (action.type == 'Navigation/BACK' && action.key != '' && state.routes[0].index == 0) || (action.type == 'Navigation/BACK' && (!action.key || action.key == '') && ((state.routes[0].index == 0 && state.routes[1] && state.routes[1].routeName !== 'tab') || (state.routes[1] && state.routes[1].routeName === 'tab' && state.routes[1].index == 0)) && ['messageCenter','projectInfo','webview','topUp','redPacket'].indexOf(state.routes[state.routes.length - 1].routeName) > -1 )){
                 //console.log('action',action,'state',state);
                 EventEmitter.emit('isHome');
