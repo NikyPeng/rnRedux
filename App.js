@@ -12,7 +12,7 @@ import {
   View
 } from 'react-native';
 import RnReduxApp from './app/views'
-
+import CodePush from 'react-native-code-push';
 const instructions = Platform.select({
   ios: 'Press Cmd+R to reload,\n' +
     'Cmd+D or shake for dev menu',
@@ -21,6 +21,15 @@ const instructions = Platform.select({
 });
 
 export default class App extends Component<{}> {
+  componentDidMount(){
+    let options = {
+      checkFrequency: CodePush.CheckFrequency.ON_APP_RESUME,
+      installMode: CodePush.InstallMode.IMMEDIATE
+    }
+    CodePush.sync(options, () => {
+      console.log('*********', arguments);
+    });
+  };
   render() {
     return (
       <RnReduxApp />

@@ -10,10 +10,16 @@ import mineRouters from './mine/mineRouters';
 
 const AppRouters = StackNavigator(Object.assign({},{
     tab: {screen: tabRouters}
-}, homeRouters, mineRouters));
-console.log('appRouters', Object.assign({},{
-    tab: {screen: tabRouters, path: 'tab'}
-}, homeRouters, mineRouters));
+}, homeRouters, mineRouters),{
+    mode: 'card',
+    transitionConfig: () => {
+        //console.log('=========', arguments)
+    },
+    onTransitionStart: (props, preProps) => {
+        //console.log('1111111', props, preProps)
+    }
+});
+
 getStateForAction(AppRouters);
 
 export default AppRouters

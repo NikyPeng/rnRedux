@@ -103,7 +103,7 @@ const tabRouters = TabNavigator({
     tabBarPosition: 'bottom',
     swiperEnabled: false,
     animationEnabled: false,
-    lazy: true,
+    lazy: false,
     initialRouteName: 'home',
     backBehavior: 'initialRoute',
     tabBarOptions: tabBarOptions

@@ -15,6 +15,7 @@ export default class Button extends Component {
 
     };
     _onPress(){
+        console.log('=====', this.click)
         if(this.click){
             this.props._onPress && this.props._onPress()
             this.click = false;
